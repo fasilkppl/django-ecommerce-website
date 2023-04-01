@@ -1,0 +1,104 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+
+
+
+<link rel='stylesheet' id='main-css'  href='https://elfsight.com/wp-content/themes/elfsight/frontend/assets/main.css?ver=2.9.5' type='text/css' media='all' />
+
+
+
+
+
+
+
+
+  <section class="application-overview-testimonials section" style="background-image: url('/static/assets/img/application-overview-testimonials-bg.jpg');">
+  
+    {% if reviews %}
+  <div class="inner">
+   
+    <h3 class="application-overview-testimonials-title" style="color:#000000;">What our customers say ❤️</h3>
+
+    <div class="col-row">
+
+    {% for review in reviews %}  
+      <div class="application-overview-testimonials-item col-4 col-m-12">
+        <div class="application-overview-testimonials-item-inner">
+          <div class="application-overview-testimonials-item-author">
+            <div class="application-overview-testimonials-item-author-image-container">
+              <img src="{% static 'assets/img/profilepic.jpg' %}" alt="Mathias Gwadanican" class="application-overview-testimonials-item-author-image" loading="lazy" data-lazy-src="https://elfsight.com/wp-content/uploads/2018/05/20621224_10155665367614533_1770015599887277422_n.jpg"><noscript><img src="https://elfsight.com/wp-content/uploads/2018/05/20621224_10155665367614533_1770015599887277422_n.jpg" alt="Mathias Gwadanican" class="application-overview-testimonials-item-author-image" loading="lazy"></noscript>
+            </div>
+
+            <div class="application-overview-testimonials-item-author-info">
+              <div class="application-overview-testimonials-item-author-info-name">{{ review.user.username }}</div>
+
+              <div class="application-overview-testimonials-item-author-info-position">Rating: {{ review.rating }}</div>
+            </div>
+
+            <div class="application-overview-testimonials-item-stars">
+                                      <span class="application-overview-testimonials-item-stars-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" width="14px" height="14px" viewBox="0 0 100 100">
+                    <use xlink:href="#icon-star"></use>
+                  </svg>
+                </span>
+                                      <span class="application-overview-testimonials-item-stars-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" width="14px" height="14px" viewBox="0 0 100 100">
+                    <use xlink:href="#icon-star"></use>
+                  </svg>
+                </span>
+                                      <span class="application-overview-testimonials-item-stars-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" width="14px" height="14px" viewBox="0 0 100 100">
+                    <use xlink:href="#icon-star"></use>
+                  </svg>
+                </span>
+                                      <span class="application-overview-testimonials-item-stars-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" width="14px" height="14px" viewBox="0 0 100 100">
+                    <use xlink:href="#icon-star"></use>
+                  </svg>
+                </span>
+                                      <span class="application-overview-testimonials-item-stars-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" width="14px" height="14px" viewBox="0 0 100 100">
+                    <use xlink:href="#icon-star"></use>
+                  </svg>
+                </span>
+                                  </div>
+          </div>
+
+          <div class="application-overview-testimonials-item-text">{{ review.comment }}</div>
+        </div>
+      </div>
+    {% endfor %}
+      </div>
+
+ 
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+  {% else %}
+  <section class="application-overview-testimonials section" style="background-image: url('/static/assets/img/application-overview-testimonials-bg.jpg'); background-size: cover; width: 100%; height: 100vh;">
+
+    <div class="inner">
+   
+      <h3 class="application-overview-testimonials-title" style="text-align: center; color:#000000;">No Reviews Yet.</h3>
+      <h4 class="application-overview-testimonials-title" style="text-align: center; color:#000000;">please add a review.</h4>
+
+
+      </div>
+    {% endif %}
+
+</section>
+{% endblock %}

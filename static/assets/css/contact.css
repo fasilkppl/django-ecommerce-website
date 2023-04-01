@@ -1,0 +1,64 @@
+
+  body {
+    background-image: url('/static/assets/img/application-overview-testimonials-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  #complaint {
+      height: 200px; /* set the height to 200 pixels */
+    }
+
+  h1 {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 100px;
+    color: #fff;
+  }
+
+  form {
+    margin-top: 50px;
+  }
+
+  label {
+    color: #000000;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  input[type="email"],
+  input[type="text"],
+  textarea {
+    background-color: #f5f5f5;
+    border: none;
+    border-radius: 5px;
+    color: #000;
+    font-size: 16px;
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 100%;
+  }
+
+  input[type="email"]:focus,
+  input[type="text"]:focus,
+  textarea:focus {
+    outline: none;
+    box-shadow: 0 0 10px #59ab6e;
+  }
+
+  button[type="submit"] {
+    background-color: #59ab6e;
+    border-color: #59ab6e;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 20px;
+  }
+
+  button[type="submit"]:hover {
+    background-color: #65836d;
+    border-color: #65836d;
+  }
+
